@@ -57,7 +57,7 @@
         class="example-icon home-icon"
         aria-label="Example icon-button with heart icon"
       >
-        <mat-icon>home</mat-icon>
+        <mat-icon color="secondary">home</mat-icon>
       </button>
     </a>
 
@@ -67,7 +67,7 @@
         class="example-icon favorite-icon"
         aria-label="Example icon-button with heart icon"
       >
-        <mat-icon>favorite</mat-icon>
+        <mat-icon color="secondary">edit</mat-icon>
       </button>
     </a>
 
@@ -77,8 +77,35 @@
         class="example-icon"
         aria-label="Example icon-button with share icon"
       >
-        <mat-icon>share</mat-icon>
+        <mat-icon color="secondary">share</mat-icon>
       </button>
     </a>
+
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>more_vert</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <a class="header-main-link" routerLink="/components-page">
+        <button mat-menu-item>
+          <mat-icon>construction</mat-icon>
+          <span>Components</span>
+        </button>
+      </a>
+
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Modules</span>
+      </button>
+
+      <button mat-menu-item disabled>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Pages</span>
+      </button>
+    </mat-menu>
   </div>
 </mat-toolbar>
