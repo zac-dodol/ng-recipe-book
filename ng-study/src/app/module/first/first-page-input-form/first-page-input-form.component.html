@@ -1,0 +1,20 @@
+<div class="d-flex gap-3 mt-4 w-50">
+  <label for="username"> Username : </label>
+  <input
+    id="username"
+    class="flex-grow-1"
+    [(ngModel)]="inputValue"
+    (input)="onInputChange()"
+  />
+</div>
+
+<div class="d-flex flex-column gap-3 justify-content-center w-50">
+  <div>Value: {{ inputValue }}</div>
+  <button
+    class="btn btn-primary"
+    (click)="resetInput()"
+    [disabled]="inputValue === ''"
+  >
+    Reset
+  </button>
+</div>
