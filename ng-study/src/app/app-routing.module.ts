@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FirstPageComponent } from './module/first/first-page/first-page.component';
+import { ExampleLinksComponent } from './page/example-links/example-links.component';
+import { HomeComponent } from './component/home/home.component';
 
 const routes: Routes = [
   // define routes
+  { path: '', component: HomeComponent },
   { path: 'first-page', component: FirstPageComponent },
+  { path: 'example-page', component: ExampleLinksComponent },
 ];
 
 @NgModule({
