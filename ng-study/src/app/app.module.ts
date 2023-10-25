@@ -14,6 +14,10 @@ import { ButtonComponent } from './component/button/button.component';
 import { ToolbarComponent } from './component/toolbar/toolbar.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { ComponentsPageComponent } from './component/components-page/components-page.component';
+import { ServersComponent } from './component/servers/servers.component';
+import { ServerComponent } from './component/server/server.component';
+import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './component/header/header.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,9 @@ import { ComponentsPageComponent } from './component/components-page/components-
     ButtonComponent,
     ToolbarComponent,
     ComponentsPageComponent,
+    ServersComponent,
+    ServerComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +40,7 @@ import { ComponentsPageComponent } from './component/components-page/components-
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -57,7 +57,7 @@
         class="example-icon home-icon"
         aria-label="Example icon-button with heart icon"
       >
-        <mat-icon color="secondary">home</mat-icon>
+        <mat-icon>home</mat-icon>
       </button>
     </a>
 
@@ -67,20 +67,23 @@
         class="example-icon favorite-icon"
         aria-label="Example icon-button with heart icon"
       >
-        <mat-icon color="secondary">edit</mat-icon>
+        <mat-icon>edit</mat-icon>
       </button>
     </a>
 
-    <a class="header-main-link" routerLink="/example-page" hidden>
-      <button
-        mat-icon-button
-        class="example-icon"
-        aria-label="Example icon-button with share icon"
-      >
-        <mat-icon color="secondary">share</mat-icon>
+    <a class="header-main-link" routerLink="/experiments-page">
+      <button mat-menu-item>
+        <mat-icon>science</mat-icon>
       </button>
     </a>
 
+    <a class="header-main-link" routerLink="/components-page">
+      <button mat-menu-item>
+        <mat-icon>construction</mat-icon>
+      </button>
+    </a>
+
+    <!-- more menu -->
     <button
       mat-icon-button
       [matMenuTriggerFor]="menu"
@@ -90,10 +93,13 @@
     </button>
 
     <mat-menu #menu="matMenu">
-      <a class="header-main-link" routerLink="/components-page">
-        <button mat-menu-item>
-          <mat-icon>construction</mat-icon>
-          <span>Components</span>
+      <a class="header-main-link" routerLink="/example-page" hidden>
+        <button
+          mat-icon-button
+          class="example-icon"
+          aria-label="Example icon-button with share icon"
+        >
+          <mat-icon>foundation</mat-icon>
         </button>
       </a>
 

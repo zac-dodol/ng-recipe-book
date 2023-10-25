@@ -1,0 +1,14 @@
+<button class="btn btn-primary" (click)="onToggleDetails()">
+  Show/Hide secret
+</button>
+
+<p *ngIf="showSecret">Secret Password : Help me!</p>
+
+<!-- condition on style and class to occur either thru index of OR click count -->
+<div
+  *ngFor="let logItem of log; let i = index"
+  [ngStyle]="{ color: logItem > 5 && i > 4 ? 'blue' : null }"
+  [ngClass]="{ 'border-present': logItem > 5 && i > 4 }"
+>
+  {{ logItem }}
+</div>
