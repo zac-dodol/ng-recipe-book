@@ -6,6 +6,7 @@ import { HomeComponent } from './component/home/home.component';
 import { ComponentsPageComponent } from './component/components-page/components-page.component';
 import { ServerComponent } from './component/server/server.component';
 import { ServersComponent } from './component/servers/servers.component';
+import { RecipePageComponent } from './page/recipe-page/recipe-page.component';
 
 const routes: Routes = [
   // define routes
@@ -14,7 +15,7 @@ const routes: Routes = [
   { path: 'example-page', component: ExampleLinksComponent },
   { path: 'components-page', component: ComponentsPageComponent },
   { path: 'experiments-page', component: ServersComponent },
-  { path: 'recipe-page', component: ServersComponent },
+  { path: 'recipe-page', component: RecipePageComponent },
 ];
 
 @NgModule({

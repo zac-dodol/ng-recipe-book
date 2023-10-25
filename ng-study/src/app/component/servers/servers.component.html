@@ -26,5 +26,9 @@
   </ng-template>
 </div>
 
-<app-server [serverName]="servers" *ngFor="let server of servers"></app-server>
-<!-- <app-server [serverName]="servers"></app-server> -->
+<!-- <app-server
+  (click)="onRemoveServer(i)"
+  [serverName]="servers"
+  *ngFor="let server of servers; let i = index"
+></app-server> -->
+<app-server [serverName]="servers"></app-server>

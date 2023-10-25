@@ -1,9 +1,20 @@
-<p [ngClass]="getColor()">
+<!-- only sent the array length -->
+<!-- <p [ngClass]="getColor()">
   Server with ID {{ serverId }} is {{ getServerStatus() }}
+</p> -->
 
-  <!-- to sent input of server name -->
-  <!-- <p [ngClass]="getColor()" *ngFor="let server of serverName"> -->
-  <!-- Server {{ server }} with ID {{ serverId }} is {{ getServerStatus() }} -->
-</p>
+<!-- to sent input of server name -->
+<div
+  class="d-flex gap-1"
+  *ngFor="let server of serverName; let i = index"
+  (click)="onRemoveServer(i)"
+>
+  <p [ngClass]="getColor()">
+    Server {{ server }} with ID {{ serverId }} is {{ getServerStatus() }}
+  </p>
 
+  <button (click)="onRemoveServer(i)">
+    <mat-icon>trash</mat-icon>
+  </button>
+</div>
 <!-- {{ serverName }} -->

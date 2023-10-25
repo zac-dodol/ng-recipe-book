@@ -22,4 +22,9 @@ export class ServerComponent {
   getColor() {
     return this.serverStatus == 'online' ? 'online' : 'offline';
   }
+
+  onRemoveServer(id: number) {
+    const position = id;
+    this.serverName.splice(position, 1);
+  }
 }

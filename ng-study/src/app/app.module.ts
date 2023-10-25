@@ -18,6 +18,13 @@ import { ServersComponent } from './component/servers/servers.component';
 import { ServerComponent } from './component/server/server.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './component/header/header.component';
+import { RecipePageComponent } from './page/recipe-page/recipe-page.component';
+import { RecipesComponent } from './component/recipes/recipes.component';
+import { RecipesListComponent } from './component/recipes/recipes-list/recipes-list.component';
+import { RecipesDetailComponent } from './component/recipes/recipes-detail/recipes-detail.component';
+import { ShoppingListComponent } from './component/shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './component/shopping-list/shopping-edit/shopping-edit.component';
+import { RecipesItemComponent } from './component/recipes/recipes-list/recipes-item/recipes-item.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +37,13 @@ import { HeaderComponent } from './component/header/header.component';
     ServersComponent,
     ServerComponent,
     HeaderComponent,
+    RecipePageComponent,
+    RecipesComponent,
+    RecipesListComponent,
+    RecipesDetailComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent,
+    RecipesItemComponent,
   ],
   imports: [
     BrowserModule,
