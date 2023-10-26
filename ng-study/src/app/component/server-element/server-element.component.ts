@@ -10,9 +10,24 @@ export class ServerElementComponent {
     type: string;
     name: string;
     content: string;
+    footer: string;
   } = {
     type: '',
     name: '',
     content: '',
+    footer: '',
   };
+
+  getColorByElementType(type: string): string {
+    switch (type) {
+      case 'server':
+        return 'red';
+      case 'blueprint':
+        return 'blue';
+      case 'footer':
+        return 'green';
+      default:
+        return ''; // Default color or handle other types as needed
+    }
+  }
 }

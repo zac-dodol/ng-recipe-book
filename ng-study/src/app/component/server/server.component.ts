@@ -15,11 +15,19 @@ export class ServerComponent {
       type: 'server',
       name: 'TestServer',
       content: 'Just a test',
+      footer: 'footer test',
     },
     {
       type: 'blueprint',
       name: 'TestBlueprint',
       content: 'Just a test',
+      footer: 'footer test',
+    },
+    {
+      type: 'footer',
+      name: 'TestFooter',
+      content: 'Just a test',
+      footer: 'footer test',
     },
   ];
 
@@ -42,19 +50,42 @@ export class ServerComponent {
     this.serverName.splice(position, 1);
   }
 
-  onServerAdded(serverData: { serverName: string; serverContent: string }) {
+  onServerAdded(serverData: {
+    serverName: string;
+    serverContent: string;
+    serverFooter: string;
+  }) {
     this.serverElements.push({
       type: 'server',
       name: serverData.serverName,
       content: serverData.serverContent,
+      footer: serverData.serverFooter,
     });
   }
 
-  onBlueprintAdded(serverData: { serverName: string; serverContent: string }) {
+  onBlueprintAdded(serverData: {
+    serverName: string;
+    serverContent: string;
+    serverFooter: string;
+  }) {
     this.serverElements.push({
       type: 'blueprint',
       name: serverData.serverName,
       content: serverData.serverContent,
+      footer: serverData.serverFooter,
+    });
+  }
+
+  onFooterAdded(serverData: {
+    serverName: string;
+    serverContent: string;
+    serverFooter: string;
+  }) {
+    this.serverElements.push({
+      type: 'footer',
+      name: serverData.serverName,
+      content: serverData.serverContent,
+      footer: serverData.serverFooter,
     });
   }
 }

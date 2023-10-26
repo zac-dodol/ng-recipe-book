@@ -17,12 +17,13 @@
 
 <!-- add thru input from another component -->
 <div class="row">
-  <div class="col-xs-12">
+  <div class="col-6">
     <p>Add new Servers or blueprints!</p>
 
     <app-server-cockpit
       (serverCreated)="onServerAdded($event)"
       (bpCreated)="onBlueprintAdded($event)"
+      (fooCreated)="onFooterAdded($event)"
     ></app-server-cockpit>
   </div>
 </div>
@@ -32,10 +33,15 @@
 <!-- show added server or blueprint -->
 <div
   *ngIf="serverElements.length !== 0"
-  class="d-flex col w-100 justify-content-evenly flex-wrap gap-1"
+  class="d-flex col w-100 flex-wrap gap-1"
 >
   <app-server-element
     *ngFor="let serverElement of serverElements"
     [srvElement]="serverElement"
-  ></app-server-element>
+  >
+    <!-- ng content example -->
+    <span class="card-text" class="card-text">
+      {{ serverElement.footer }}
+    </span>
+  </app-server-element>
 </div>

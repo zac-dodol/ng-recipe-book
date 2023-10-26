@@ -1,9 +1,15 @@
-<label>Server Name</label>
-<input type="text" class="form-control" #serverNameInput />
+<div class="d-flex flex-column gap-2 my-3 col-6">
+  <label>Server Name</label>
+  <!-- using template reference -->
+  <input type="text" class="form-control" #serverNameInput />
 
-<label>Server Content</label>
-<input type="text" class="form-control" [(ngModel)]="newServerContent" />
-<br />
+  <label>Server Content</label>
+  <!-- using viewChild -->
+  <input type="text" class="form-control" #serverContentInput />
+
+  <label>Server Footer</label>
+  <input type="text" class="form-control" [(ngModel)]="newServerFooter" />
+</div>
 
 <div class="d-flex gap-1">
   <button class="btn btn-primary" (click)="onAddServer(serverNameInput)">
@@ -12,5 +18,9 @@
 
   <button class="btn btn-primary" (click)="onAddBlueprint(serverNameInput)">
     Add Server Blueprint
+  </button>
+
+  <button class="btn btn-primary" (click)="onAddFooter(serverNameInput)">
+    Add Server Footer
   </button>
 </div>
