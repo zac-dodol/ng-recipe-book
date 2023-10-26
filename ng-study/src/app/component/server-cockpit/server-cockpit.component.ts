@@ -1,5 +1,6 @@
 import {
   Component,
+  ContentChild,
   ElementRef,
   EventEmitter,
   Output,
@@ -31,6 +32,7 @@ export class ServerCockpitComponent {
   }>();
 
   @ViewChild('serverContentInput') serverContentInput: ElementRef;
+  // @ContentChild('serverContentInput') serverContentInput: ElementRef;
   newServerFooter = 'foot';
 
   onAddServer(serverNameInput: any) {

@@ -28,6 +28,9 @@ import { ShoppingEditComponent } from './component/shopping-list/shopping-edit/s
 import { RecipesItemComponent } from './component/recipes/recipes-list/recipes-item/recipes-item.component';
 import { ServerElementComponent } from './component/server-element/server-element.component';
 import { ServerCockpitComponent } from './component/server-cockpit/server-cockpit.component';
+import { GameControlComponent } from './component/game-control/game-control.component';
+import { OddComponent } from './component/odd/odd.component';
+import { EvenComponent } from './component/even/even.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,9 @@ import { ServerCockpitComponent } from './component/server-cockpit/server-cockpi
     RecipesItemComponent,
     ServerElementComponent,
     ServerCockpitComponent,
+    GameControlComponent,
+    OddComponent,
+    EvenComponent,
   ],
   imports: [
     BrowserModule,

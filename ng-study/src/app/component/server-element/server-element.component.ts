@@ -18,6 +18,7 @@ export class ServerElementComponent {
     footer: '',
   };
 
+  // switch case for color base on the type
   getColorByElementType(type: string): string {
     switch (type) {
       case 'server':
@@ -27,7 +28,7 @@ export class ServerElementComponent {
       case 'footer':
         return 'green';
       default:
-        return ''; // Default color or handle other types as needed
+        return '';
     }
   }
 }
