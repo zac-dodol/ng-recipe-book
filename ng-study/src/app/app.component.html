@@ -1,13 +1,12 @@
 <!-- header -->
-<app-header *ngIf="isRecipePage(); else projectToolbar"></app-header>
+<app-header *ngIf="!isRecipePage(); else projectToolbar"></app-header>
 
 <!-- header using toolbar -->
 <ng-template #projectToolbar>
   <app-toolbar [title]="title"></app-toolbar>
 </ng-template>
 
-<section class="header"></section>
-
+<!-- content -->
 <section class="content p-2">
   <router-outlet></router-outlet>
 </section>

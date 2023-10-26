@@ -1,77 +1,45 @@
 <section class="experiments d-flex flex-wrap gap-1 my-2">
   <div class="items">
     <a class="header-main-link" routerLink="/">
-      <button
-        mat-raised-button
-        class="example-icon home-icon"
-        aria-label="Example icon-button with heart icon"
-      >
-        <span>Home</span>
-      </button>
+      <app-button [text]="'Home'"></app-button>
     </a>
   </div>
 
   <div class="items">
     <a class="header-main-link" routerLink="/first-page">
-      <button
-        mat-raised-button
-        class="example-icon favorite-icon"
-        aria-label="Example icon-button with heart icon"
-      >
-        <span>Input</span>
-      </button>
+      <app-button [color]="'link'" [text]="'Input'"></app-button>
     </a>
   </div>
 
   <div class="items">
     <a class="header-main-link" routerLink="/example-page">
-      <button
-        mat-raised-button
-        class="example-icon"
-        aria-label="Example icon-button with share icon"
-      >
-        <span>Base</span>
-      </button>
+      <app-button [color]="'warn'" [text]="'Base'"></app-button>
     </a>
   </div>
 
   <div class="items">
-    <a class="header-main-link" routerLink="/experiments-page">
-      <button mat-raised-button>
-        <span>Experiments</span>
-      </button>
+    <a class="header-main-link" routerLink="/server-page">
+      <app-button [text]="'Server'"></app-button>
     </a>
   </div>
 
   <div class="items">
-    <button mat-raised-button disabled>
-      <span>Modules</span>
-    </button>
+    <app-button [text]="'Modules'" [disabled]="true"></app-button>
   </div>
 
   <div class="items">
-    <button mat-raised-button disabled>
-      <span>Pages</span>
-    </button>
+    <app-button [text]="'Pages'" [disabled]="true"></app-button>
   </div>
 
   <div class="items">
     <a class="header-main-link" routerLink="/components-page">
-      <button mat-raised-button>
-        <span>Components</span>
-      </button>
+      <app-button [color]="'accent'" [text]="'Components'"></app-button>
     </a>
   </div>
 
   <div class="items">
     <a class="header-main-link" routerLink="/recipe-page">
-      <button
-        mat-raised-button
-        class="example-icon"
-        aria-label="Example icon-button with share icon"
-      >
-        <span>Recipe Book</span>
-      </button>
+      <app-button [text]="'Recipe book'"></app-button>
     </a>
   </div>
 </section>

@@ -4,19 +4,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstPageModule } from './module/first/first.module';
-import { ExampleLinksComponent } from './page/example-links/example-links.component';
-import { HomeComponent } from './component/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+
+import { HomeComponent } from './component/home/home.component';
+import { ExampleLinksComponent } from './page/example-links/example-links.component';
 import { ButtonComponent } from './component/button/button.component';
 import { ToolbarComponent } from './component/toolbar/toolbar.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { ComponentsPageComponent } from './component/components-page/components-page.component';
 import { ServersComponent } from './component/servers/servers.component';
 import { ServerComponent } from './component/server/server.component';
-import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './component/header/header.component';
 import { RecipePageComponent } from './page/recipe-page/recipe-page.component';
 import { RecipesComponent } from './component/recipes/recipes.component';
@@ -25,6 +26,8 @@ import { RecipesDetailComponent } from './component/recipes/recipes-detail/recip
 import { ShoppingListComponent } from './component/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './component/shopping-list/shopping-edit/shopping-edit.component';
 import { RecipesItemComponent } from './component/recipes/recipes-list/recipes-item/recipes-item.component';
+import { ServerElementComponent } from './component/server-element/server-element.component';
+import { ServerCockpitComponent } from './component/server-cockpit/server-cockpit.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,8 @@ import { RecipesItemComponent } from './component/recipes/recipes-list/recipes-i
     ShoppingListComponent,
     ShoppingEditComponent,
     RecipesItemComponent,
+    ServerElementComponent,
+    ServerCockpitComponent,
   ],
   imports: [
     BrowserModule,

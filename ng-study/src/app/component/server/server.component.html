@@ -1,20 +1,41 @@
-<!-- only sent the array length -->
-<!-- <p [ngClass]="getColor()">
-  Server with ID {{ serverId }} is {{ getServerStatus() }}
-</p> -->
-
-<!-- to sent input of server name -->
+<!-- to add input of server name -->
 <div
-  class="d-flex gap-1"
+  class="d-flex gap-1 my-2 align-items-center"
   *ngFor="let server of serverName; let i = index"
   (click)="onRemoveServer(i)"
 >
-  <p [ngClass]="getColor()">
-    Server {{ server }} with ID {{ serverId }} is {{ getServerStatus() }}
-  </p>
+  <span [ngClass]="getColor()">
+    Server {{ server }} with ID {{ i }} is {{ getServerStatus() }}
+  </span>
 
-  <button (click)="onRemoveServer(i)">
-    <mat-icon>trash</mat-icon>
+  <button type="button" class="btn btn-danger" (click)="onRemoveServer(i)">
+    delete
   </button>
 </div>
-<!-- {{ serverName }} -->
+
+<hr />
+
+<!-- add thru input from another component -->
+<div class="row">
+  <div class="col-xs-12">
+    <p>Add new Servers or blueprints!</p>
+
+    <app-server-cockpit
+      (serverCreated)="onServerAdded($event)"
+      (serverCreated)="onBlueprintAdded($event)"
+    ></app-server-cockpit>
+  </div>
+</div>
+
+<hr />
+
+<!-- show added server or blueprint -->
+<div
+  *ngIf="serverElements.length !== 0"
+  class="d-flex col w-100 justify-content-evenly flex-wrap gap-1"
+>
+  <app-server-element
+    *ngFor="let serverElement of serverElements"
+    [srvElement]="serverElement"
+  ></app-server-element>
+</div>

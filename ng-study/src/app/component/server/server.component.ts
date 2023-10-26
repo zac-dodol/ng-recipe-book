@@ -9,6 +9,20 @@ export class ServerComponent {
   serverId: number = 10;
   serverStatus: string = 'offline';
 
+  // Explicitly specify the type of the array
+  serverElements = [
+    {
+      type: 'server',
+      name: 'TestServer',
+      content: 'Just a test',
+    },
+    {
+      type: 'blueprint',
+      name: 'TestBlueprint',
+      content: 'Just a test',
+    },
+  ];
+
   @Input() serverName: any[] = [];
 
   constructor() {
@@ -26,5 +40,21 @@ export class ServerComponent {
   onRemoveServer(id: number) {
     const position = id;
     this.serverName.splice(position, 1);
+  }
+
+  onServerAdded(serverData: { serverName: string; serverContent: string }) {
+    this.serverElements.push({
+      type: 'server',
+      name: serverData.serverName,
+      content: serverData.serverContent,
+    });
+  }
+
+  onBlueprintAdded(serverData: { serverName: string; serverContent: string }) {
+    this.serverElements.push({
+      type: 'blueprint',
+      name: serverData.serverName,
+      content: serverData.serverContent,
+    });
   }
 }

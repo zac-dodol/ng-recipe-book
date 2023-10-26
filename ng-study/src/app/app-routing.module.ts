@@ -10,12 +10,12 @@ import { RecipePageComponent } from './page/recipe-page/recipe-page.component';
 
 const routes: Routes = [
   // define routes
-  { path: '', component: HomeComponent },
+  { path: '', component: RecipePageComponent },
   { path: 'first-page', component: FirstPageComponent },
   { path: 'example-page', component: ExampleLinksComponent },
   { path: 'components-page', component: ComponentsPageComponent },
-  { path: 'experiments-page', component: ServersComponent },
-  { path: 'recipe-page', component: RecipePageComponent },
+  { path: 'server-page', component: ServersComponent },
+  { path: 'recipe-page', component: HomeComponent },
 ];
 
 @NgModule({
