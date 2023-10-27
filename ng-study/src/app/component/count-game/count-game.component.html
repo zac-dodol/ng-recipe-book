@@ -1,9 +1,19 @@
 <app-game-control (intervalFired)="onIntervalFired($event)"></app-game-control>
 
-<div class="d-flex flex-column">
-  <app-odd *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd>
-  <app-even
-    *ngFor="let evenNumber of evenNumbers"
-    [number]="evenNumber"
-  ></app-even>
+<div class="d-flex">
+  <div class="d-flex flex-column">
+    Odd sequence
+    <app-odd
+      *ngFor="let oddNumber of oddNumbers"
+      [number]="oddNumber"
+    ></app-odd>
+  </div>
+
+  <div class="d-flex flex-column">
+    Even sequence
+    <app-even
+      *ngFor="let evenNumber of evenNumbers"
+      [number]="evenNumber"
+    ></app-even>
+  </div>
 </div>

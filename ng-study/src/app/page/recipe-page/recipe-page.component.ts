@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./recipe-page.component.scss'],
 })
 export class RecipePageComponent {
-  loadedFeature: 'recipe' | 'shopping' = 'recipe';
+  loadedFeature: 'recipe' | 'shopping';
 
   onSelect(feature: 'recipe' | 'shopping') {
     this.loadedFeature = feature;
