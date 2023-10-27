@@ -4,10 +4,11 @@ import { FirstPageComponent } from './module/first/first-page/first-page.compone
 import { ExampleLinksComponent } from './page/example-links/example-links.component';
 import { HomeComponent } from './component/home/home.component';
 import { ComponentsPageComponent } from './component/components-page/components-page.component';
-import { ServerComponent } from './component/server/server.component';
 import { ServersComponent } from './component/servers/servers.component';
 import { RecipePageComponent } from './page/recipe-page/recipe-page.component';
 import { CountGameComponent } from './component/count-game/count-game.component';
+import { RecipesComponent } from './component/recipes/recipes.component';
+import { ShoppingListComponent } from './component/shopping-list/shopping-list.component';
 
 const routes: Routes = [
   // define routes
@@ -18,6 +19,8 @@ const routes: Routes = [
   { path: 'server-page', component: ServersComponent },
   { path: 'recipe-page', component: RecipePageComponent },
   { path: 'game-page', component: CountGameComponent },
+  { path: 'recipe', component: RecipesComponent },
+  { path: 'shopping-list', component: ShoppingListComponent },
 ];
 
 @NgModule({

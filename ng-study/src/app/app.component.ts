@@ -79,7 +79,10 @@ export class AppComponent
     // just before removing a component
   }
 
+  // dual header not required now
   isRecipePage() {
-    return this.router.url === '/recipe-page';
+    return ['/recipe-page', '/', '/recipe', '/shopping-list'].includes(
+      this.router.url
+    );
   }
 }
