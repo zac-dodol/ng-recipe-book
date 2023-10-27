@@ -7,6 +7,7 @@ import { ComponentsPageComponent } from './component/components-page/components-
 import { ServerComponent } from './component/server/server.component';
 import { ServersComponent } from './component/servers/servers.component';
 import { RecipePageComponent } from './page/recipe-page/recipe-page.component';
+import { CountGameComponent } from './component/count-game/count-game.component';
 
 const routes: Routes = [
   // define routes
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'components-page', component: ComponentsPageComponent },
   { path: 'server-page', component: ServersComponent },
   { path: 'recipe-page', component: RecipePageComponent },
+  { path: 'game-page', component: CountGameComponent },
 ];
 
 @NgModule({

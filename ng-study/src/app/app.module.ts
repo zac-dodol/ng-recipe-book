@@ -31,6 +31,7 @@ import { ServerCockpitComponent } from './component/server-cockpit/server-cockpi
 import { GameControlComponent } from './component/game-control/game-control.component';
 import { OddComponent } from './component/odd/odd.component';
 import { EvenComponent } from './component/even/even.component';
+import { CountGameComponent } from './component/count-game/count-game.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { EvenComponent } from './component/even/even.component';
     GameControlComponent,
     OddComponent,
     EvenComponent,
+    CountGameComponent,
   ],
   imports: [
     BrowserModule,

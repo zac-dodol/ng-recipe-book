@@ -1,3 +1,4 @@
+<h2 class="link-secondary">Experiments</h2>
 <section class="experiments d-flex flex-wrap gap-1 my-2">
   <div class="items">
     <a class="header-main-link" routerLink="/">
@@ -36,10 +37,19 @@
       <app-button [color]="'accent'" [text]="'Components'"></app-button>
     </a>
   </div>
+</section>
 
+<h2 class="link-danger">Projects</h2>
+<section class="projects d-flex gap-2">
   <div class="items">
     <a class="header-main-link" routerLink="/recipe-page">
       <app-button [text]="'Recipe book'"></app-button>
+    </a>
+  </div>
+
+  <div class="items">
+    <a class="header-main-link" routerLink="/game-page">
+      <app-button [text]="'Game counter'"></app-button>
     </a>
   </div>
 </section>
