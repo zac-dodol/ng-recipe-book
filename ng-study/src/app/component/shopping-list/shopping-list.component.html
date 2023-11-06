@@ -1,5 +1,8 @@
 <div>
-  <app-shopping-edit></app-shopping-edit>
+  <app-shopping-edit
+    (ingredientAdded)="onIngredientAdded($event)"
+    (ingredientDelete)="onIngredientDelete()"
+  ></app-shopping-edit>
 
   <hr />
 
