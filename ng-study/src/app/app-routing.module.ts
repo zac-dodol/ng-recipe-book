@@ -9,6 +9,7 @@ import { RecipePageComponent } from './page/recipe-page/recipe-page.component';
 import { CountGameComponent } from './component/count-game/count-game.component';
 import { RecipesComponent } from './component/recipes/recipes.component';
 import { ShoppingListComponent } from './component/shopping-list/shopping-list.component';
+import { IfForComponent } from './component/if-for/if-for.component';
 
 const routes: Routes = [
   // define routes
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'game-page', component: CountGameComponent },
   { path: 'recipe', component: RecipesComponent },
   { path: 'shopping-list', component: ShoppingListComponent },
+  { path: 'if-for-page', component: IfForComponent },
 ];
 
 @NgModule({

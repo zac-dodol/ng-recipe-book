@@ -34,47 +34,47 @@ export class AppComponent
 
   // lifecycle hooks of angular
   ngOnChanges(changes: SimpleChanges) {
-    console.log('ngOnChanges');
-    console.log(changes);
+    // console.log('ngOnChanges');
+    // console.log(changes);
     // called after a bound input property changes
     // Respond to changes in @input properties
     // Do something when @input Property changes
   }
 
   ngOnInit() {
-    console.log('ngOnInit');
+    // console.log('ngOnInit');
     // called once the component is initialized
   }
 
   ngDoCheck(): void {
-    console.log('ngDoCheck');
+    // console.log('ngDoCheck');
     // called during every change detection run
     // Implement custom change detection logic
     // This method is called during every change detection cycle
   }
 
   ngAfterContentInit(): void {
-    console.log('ngAfterContentInit');
+    // console.log('ngAfterContentInit');
     // called after content (ng-content) has been projected into view
   }
 
   ngAfterContentChecked(): void {
-    console.log('ngAfterContentInit');
+    // console.log('ngAfterContentInit');
     // called every time the projected content has been checked
   }
 
   ngAfterViewInit(): void {
-    console.log('ngAfterViewInit');
+    // console.log('ngAfterViewInit');
     // called after the component's view (and the child views) has been initialized
   }
 
   ngAfterViewChecked(): void {
-    console.log('ngAfterViewInit');
+    // console.log('ngAfterViewInit');
     // called every time the view (and child views) has been checked
   }
 
   ngOnDestroy(): void {
-    console.log('ngOnDestroy');
+    // console.log('ngOnDestroy');
     // called once the component is a about to be destroyed (eg: ngif, splice, removal of component)
     // just before removing a component
   }

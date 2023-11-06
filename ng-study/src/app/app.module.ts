@@ -32,6 +32,7 @@ import { GameControlComponent } from './component/game-control/game-control.comp
 import { OddComponent } from './component/odd/odd.component';
 import { EvenComponent } from './component/even/even.component';
 import { CountGameComponent } from './component/count-game/count-game.component';
+import { IfForComponent } from './component/if-for/if-for.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { CountGameComponent } from './component/count-game/count-game.component'
     OddComponent,
     EvenComponent,
     CountGameComponent,
+    IfForComponent,
   ],
   imports: [
     BrowserModule,
