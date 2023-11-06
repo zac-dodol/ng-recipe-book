@@ -6,9 +6,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./recipe-page.component.scss'],
 })
 export class RecipePageComponent {
-  loadedFeature: 'recipe' | 'shopping';
+  loadedFeature: string = 'recipe';
 
-  onSelect(feature: 'recipe' | 'shopping') {
+  onSelect(feature: string) {
     this.loadedFeature = feature;
   }
 }

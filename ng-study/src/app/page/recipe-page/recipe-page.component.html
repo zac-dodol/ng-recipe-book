@@ -1,22 +1,19 @@
 <div class="d-flex flex-column col-12 p-3">
-  <div class="nav d-flex gap-1">
-    <a class="nav-link" href="javascript:void(0);" (click)="onSelect('recipe')">
-      <app-button
-        [text]="'Recipes'"
-        [color]="'link'"
-        (click)="onSelect('recipe')"
-      ></app-button
-    ></a>
+  <div class="nav d-flex gap-2 mb-4">
     <a
-      class="nav-link"
+      class="nav-link p-0"
+      href="javascript:void(0);"
+      (click)="onSelect('recipe')"
+    >
+      <app-button [text]="'Recipes'" [color]="'link'"></app-button
+    ></a>
+
+    <a
+      class="nav-link p-0"
       href="javascript:void(0);"
       (click)="onSelect('shopping')"
     >
-      <app-button
-        [text]="'Shopping-list'"
-        [color]="'link'"
-        (click)="onSelect('shopping')"
-      ></app-button>
+      <app-button [text]="'Shopping-list'" [color]="'link'"></app-button>
     </a>
   </div>
 

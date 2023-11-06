@@ -1,1 +1,19 @@
-<p>recipes-item works!</p>
+<a class="clearfix" (click)="onSelected()">
+  <div class="card">
+    <img
+      [src]="recipeList.imagePath"
+      class="card-img-top"
+      [alt]="recipeList.name"
+    />
+
+    <div class="card-body">
+      <h5 class="card-title">{{ recipeList.name }}</h5>
+
+      <p class="card-text">
+        {{ recipeList.description }}
+      </p>
+
+      <a class="btn btn-primary">See details</a>
+    </div>
+  </div>
+</a>

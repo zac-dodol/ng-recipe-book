@@ -6,28 +6,10 @@
 
 <hr />
 
-<div class="row px-2">
-  <div class="list-group d-flex flex-row gap-1">
-    <a href="#" class="clearfix" *ngFor="let recipe of recipes">
-      <div class="card">
-        <img
-          [src]="recipe.imagePath"
-          class="card-img-top"
-          [alt]="recipe.name"
-        />
-
-        <div class="card-body">
-          <h5 class="card-title">{{ recipe.name }}</h5>
-
-          <p class="card-text">
-            {{ recipe.description }}
-          </p>
-
-          <a href="#" class="btn btn-primary">See details</a>
-        </div>
-      </div>
-    </a>
-  </div>
+<div class="d-flex gap-2">
+  <app-recipes-item
+    *ngFor="let recipeUniq of recipes"
+    [recipeList]="recipeUniq"
+    (recipeSelected)="onRecipeSelected(recipeUniq)"
+  ></app-recipes-item>
 </div>
-
-<app-recipes-item></app-recipes-item>
