@@ -36,6 +36,7 @@ import { IfForComponent } from './component/if-for/if-for.component';
 import { BasicHighlightDirective } from './directive/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './directive/better-highlight/better-highlight.directive';
 import { BindingDirectiveDirective } from './directive/binding-directive/binding-directive.directive';
+import { UnlessDirective } from './directive/unless/unless.directive';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { BindingDirectiveDirective } from './directive/binding-directive/binding
     BasicHighlightDirective,
     BetterHighlightDirective,
     BindingDirectiveDirective,
+    UnlessDirective,
   ],
   imports: [
     BrowserModule,
