@@ -33,6 +33,8 @@ import { OddComponent } from './component/odd/odd.component';
 import { EvenComponent } from './component/even/even.component';
 import { CountGameComponent } from './component/count-game/count-game.component';
 import { IfForComponent } from './component/if-for/if-for.component';
+import { BasicHighlightDirective } from './directive/basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './directive/better-highlight/better-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { IfForComponent } from './component/if-for/if-for.component';
     EvenComponent,
     CountGameComponent,
     IfForComponent,
+    BasicHighlightDirective,
+    BetterHighlightDirective,
   ],
   imports: [
     BrowserModule,
