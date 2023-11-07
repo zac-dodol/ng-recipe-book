@@ -35,6 +35,7 @@ import { CountGameComponent } from './component/count-game/count-game.component'
 import { IfForComponent } from './component/if-for/if-for.component';
 import { BasicHighlightDirective } from './directive/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './directive/better-highlight/better-highlight.directive';
+import { BindingDirectiveDirective } from './directive/binding-directive/binding-directive.directive';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { BetterHighlightDirective } from './directive/better-highlight/better-hi
     IfForComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
+    BindingDirectiveDirective,
   ],
   imports: [
     BrowserModule,
