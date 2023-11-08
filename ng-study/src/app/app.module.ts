@@ -37,6 +37,7 @@ import { BasicHighlightDirective } from './directive/basic-highlight/basic-highl
 import { BetterHighlightDirective } from './directive/better-highlight/better-highlight.directive';
 import { BindingDirectiveDirective } from './directive/binding-directive/binding-directive.directive';
 import { UnlessDirective } from './directive/unless/unless.directive';
+import { DropdownDirectiveDirective } from './directive/dropdown-directive/dropdown-directive.directive';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { UnlessDirective } from './directive/unless/unless.directive';
     BetterHighlightDirective,
     BindingDirectiveDirective,
     UnlessDirective,
+    DropdownDirectiveDirective,
   ],
   imports: [
     BrowserModule,
