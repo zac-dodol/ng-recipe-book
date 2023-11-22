@@ -1,4 +1,4 @@
-# NgStudy
+# NgStudy - Main reason for creating this is to refresh my knowledge in creating Angular projects
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
 
