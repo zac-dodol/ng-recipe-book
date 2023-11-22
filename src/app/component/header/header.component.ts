@@ -16,4 +16,8 @@ export class HeaderComponent {
   get isRecipeRoute(): boolean {
     return this.router.url === '/recipe-page';
   }
+
+  get isOtherRoute(): boolean {
+    return this.router.url !== '/recipe-page' && this.router.url !== '/';
+  }
 }
