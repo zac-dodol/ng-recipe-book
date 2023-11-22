@@ -38,6 +38,7 @@ import { BetterHighlightDirective } from './directive/better-highlight/better-hi
 import { BindingDirectiveDirective } from './directive/binding-directive/binding-directive.directive';
 import { UnlessDirective } from './directive/unless/unless.directive';
 import { DropdownDirectiveDirective } from './directive/dropdown-directive/dropdown-directive.directive';
+import { MockDataComponent } from './component/mock-data/mock-data.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { DropdownDirectiveDirective } from './directive/dropdown-directive/dropd
     BindingDirectiveDirective,
     UnlessDirective,
     DropdownDirectiveDirective,
+    MockDataComponent,
   ],
   imports: [
     BrowserModule,

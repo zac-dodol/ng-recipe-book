@@ -1,0 +1,9 @@
+<section *ngIf="data" class="border p-4 d-flex gap-2 flex-wrap">
+  <div *ngFor="let todo of data.todos">
+    <div class="box border rounded p-2">
+      <h3>{{ todo.todo }}</h3>
+      <p>ID: {{ todo.id }}</p>
+      <p>Completed: {{ todo.completed ? "Yes" : "No" }}</p>
+    </div>
+  </div>
+</section>
