@@ -18,8 +18,5 @@ export class AccountComponent {
 
   onSetTo(status: string) {
     this.accountData.onStatusChanged(this.id, status);
-    this.loggingService.onConsole(
-      `A server status changed, new status: ${status}`
-    );
   }
 }

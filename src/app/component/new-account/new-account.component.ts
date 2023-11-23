@@ -15,9 +15,5 @@ export class NewAccountComponent {
 
   onCreateAccount(accountName: string, accountStatus: string) {
     this.accountData.addAccount(accountName, accountStatus);
-
-    this.loggingService.onConsole(
-      `A server created: ${accountName}, new status: ${accountStatus}`
-    );
   }
 }
