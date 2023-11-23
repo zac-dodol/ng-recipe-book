@@ -42,6 +42,8 @@ import { MockDataComponent } from './component/mock-data/mock-data.component';
 import { AccountPageComponent } from './component/account-page/account-page.component';
 import { NewAccountComponent } from './component/new-account/new-account.component';
 import { AccountComponent } from './component/account/account.component';
+import { ActiveUserComponent } from './component/active-user/active-user.component';
+import { InactiveUserComponent } from './component/inactive-user/inactive-user.component';
 
 @NgModule({
   declarations: [
@@ -77,6 +79,8 @@ import { AccountComponent } from './component/account/account.component';
     AccountPageComponent,
     NewAccountComponent,
     AccountComponent,
+    ActiveUserComponent,
+    InactiveUserComponent,
   ],
   imports: [
     BrowserModule,
