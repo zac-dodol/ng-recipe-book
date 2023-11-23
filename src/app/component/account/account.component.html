@@ -1,0 +1,28 @@
+<div class="border rounded p-2 mb-2">
+  <h2>
+    {{ account.name }}
+  </h2>
+
+  <p>This account is {{ account.status }}</p>
+
+  <button
+    class="btn btn-default border rounded p-2"
+    (click)="onSetTo('active')"
+  >
+    Set to 'active'
+  </button>
+
+  <button
+    class="btn btn-default border rounded p-2"
+    (click)="onSetTo('inactive')"
+  >
+    Set to 'inactive'
+  </button>
+
+  <button
+    class="btn btn-default border rounded p-2"
+    (click)="onSetTo('unknown')"
+  >
+    Set to 'unknown'
+  </button>
+</div>

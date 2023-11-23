@@ -1,3 +1,4 @@
+import { AccountPageComponent } from './component/account-page/account-page.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FirstPageComponent } from './module/first/first-page/first-page.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'shopping-list', component: ShoppingListComponent },
   { path: 'if-for-page', component: IfForComponent },
   { path: 'mock-data', component: MockDataComponent },
+  { path: 'account-page', component: AccountPageComponent },
 ];
 
 @NgModule({

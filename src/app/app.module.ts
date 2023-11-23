@@ -39,6 +39,9 @@ import { BindingDirectiveDirective } from './directive/binding-directive/binding
 import { UnlessDirective } from './directive/unless/unless.directive';
 import { DropdownDirectiveDirective } from './directive/dropdown-directive/dropdown-directive.directive';
 import { MockDataComponent } from './component/mock-data/mock-data.component';
+import { AccountPageComponent } from './component/account-page/account-page.component';
+import { NewAccountComponent } from './component/new-account/new-account.component';
+import { AccountComponent } from './component/account/account.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +74,9 @@ import { MockDataComponent } from './component/mock-data/mock-data.component';
     UnlessDirective,
     DropdownDirectiveDirective,
     MockDataComponent,
+    AccountPageComponent,
+    NewAccountComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,
