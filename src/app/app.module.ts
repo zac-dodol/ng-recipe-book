@@ -44,6 +44,7 @@ import { NewAccountComponent } from './component/new-account/new-account.compone
 import { AccountComponent } from './component/account/account.component';
 import { ActiveUserComponent } from './component/active-user/active-user.component';
 import { InactiveUserComponent } from './component/inactive-user/inactive-user.component';
+import { ShoppingListService } from './project-recipe/shopping-list/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -93,7 +94,7 @@ import { InactiveUserComponent } from './component/inactive-user/inactive-user.c
     MatMenuModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
