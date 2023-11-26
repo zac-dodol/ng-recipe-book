@@ -6,10 +6,10 @@ import { ExampleLinksComponent } from './page/example-links/example-links.compon
 import { HomeComponent } from './component/home/home.component';
 import { ComponentsPageComponent } from './component/components-page/components-page.component';
 import { ServersComponent } from './component/servers/servers.component';
-import { RecipePageComponent } from './page/recipe-page/recipe-page.component';
+import { RecipePageComponent } from './project-recipe/recipe-page/recipe-page.component';
 import { CountGameComponent } from './component/count-game/count-game.component';
-import { RecipesComponent } from './component/recipes/recipes.component';
-import { ShoppingListComponent } from './component/shopping-list/shopping-list.component';
+import { RecipesComponent } from './project-recipe/recipes/recipes.component';
+import { ShoppingListComponent } from './project-recipe/shopping-list/shopping-list.component';
 import { IfForComponent } from './component/if-for/if-for.component';
 import { MockDataComponent } from './component/mock-data/mock-data.component';
 
