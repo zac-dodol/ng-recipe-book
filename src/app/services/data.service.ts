@@ -34,3 +34,42 @@ export class DataService {
     return response.json();
   }
 }
+
+// import { Injectable } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
+// import { Observable } from 'rxjs';
+
+// @Injectable({
+//   providedIn: 'root',
+// })
+// export class DataService {
+//   constructor(private httpClient: HttpClient) {}
+
+//   fetchData(url: string): Observable<any> {
+//     return this.httpClient.get(url);
+//   }
+
+//   postData(url: string, data: any): Observable<any> {
+//     return this.httpClient.post(url, data, {
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//     });
+//   }
+
+//   deleteData(url: string): Observable<any> {
+//     return this.httpClient.delete(url, {
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//     });
+//   }
+// }
+
+// appModule
+// import { HttpClientModule } from '@angular/common/http';
+// @NgModule({
+//   imports: [HttpClientModule],
+//   // ...
+// })
+// export class YourModule {}

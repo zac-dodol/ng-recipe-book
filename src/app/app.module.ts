@@ -45,6 +45,14 @@ import { AccountComponent } from './component/account/account.component';
 import { ActiveUserComponent } from './component/active-user/active-user.component';
 import { InactiveUserComponent } from './component/inactive-user/inactive-user.component';
 import { ShoppingListService } from './project-recipe/shopping-list/shopping-list.service';
+import { RoutingPageComponent } from './routing/routing-page/routing-page.component';
+import { RoutingHomeComponent } from './routing/routing-home/routing-home.component';
+import { RoutingUsersComponent } from './routing/routing-users/routing-users.component';
+import { RoutingServersComponent } from './routing/routing-servers/routing-servers.component';
+import { RoutingEditServerComponent } from './routing/routing-servers/routing-edit-server/routing-edit-server.component';
+import { RoutingServerComponent } from './routing/routing-servers/routing-server/routing-server.component';
+import { RoutingUserComponent } from './routing/routing-users/routing-user/routing-user.component';
+import { ServesService } from './routing/routing-servers/serves.service';
 
 @NgModule({
   declarations: [
@@ -82,6 +90,13 @@ import { ShoppingListService } from './project-recipe/shopping-list/shopping-lis
     AccountComponent,
     ActiveUserComponent,
     InactiveUserComponent,
+    RoutingPageComponent,
+    RoutingHomeComponent,
+    RoutingUsersComponent,
+    RoutingServersComponent,
+    RoutingEditServerComponent,
+    RoutingServerComponent,
+    RoutingUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -94,7 +109,7 @@ import { ShoppingListService } from './project-recipe/shopping-list/shopping-lis
     MatMenuModule,
     FormsModule,
   ],
-  providers: [ShoppingListService],
+  providers: [ShoppingListService, ServesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

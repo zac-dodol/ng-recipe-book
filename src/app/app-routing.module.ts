@@ -12,6 +12,10 @@ import { RecipesComponent } from './project-recipe/recipes/recipes.component';
 import { ShoppingListComponent } from './project-recipe/shopping-list/shopping-list.component';
 import { IfForComponent } from './component/if-for/if-for.component';
 import { MockDataComponent } from './component/mock-data/mock-data.component';
+import { RoutingPageComponent } from './routing/routing-page/routing-page.component';
+import { RoutingHomeComponent } from './routing/routing-home/routing-home.component';
+import { RoutingUsersComponent } from './routing/routing-users/routing-users.component';
+import { RoutingServersComponent } from './routing/routing-servers/routing-servers.component';
 
 const routes: Routes = [
   // define routes
@@ -27,6 +31,15 @@ const routes: Routes = [
   { path: 'if-for-page', component: IfForComponent },
   { path: 'mock-data', component: MockDataComponent },
   { path: 'account-page', component: AccountPageComponent },
+  {
+    path: 'routing-pagination',
+    component: RoutingPageComponent,
+    children: [
+      { path: 'routing-home', component: RoutingHomeComponent },
+      { path: 'routing-users', component: RoutingUsersComponent },
+      { path: 'routing-servers', component: RoutingServersComponent },
+    ],
+  },
 ];
 
 @NgModule({
