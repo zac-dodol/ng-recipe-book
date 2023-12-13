@@ -1,14 +1,22 @@
-<div class="row">
+<div class="row mt-2">
   <div class="col-xs-12 col-sm-4">
     <div class="list-group">
-      <a href="#" class="list-group-item" *ngFor="let server of servers">
+      <a
+        [routerLink]="['/routing-pagination', 'routing-servers', server.id]"
+        [queryParams]="{ allowEdit: server.id === 3 ? '1' : '0' }"
+        [fragment]="'loading'"
+        class="list-group-item"
+        *ngFor="let server of servers"
+      >
         {{ server.name }}
       </a>
     </div>
   </div>
-  <div class="col-xs-12 col-sm-4">
-    <app-routing-edit-server></app-routing-edit-server>
-    <hr />
-    <app-routing-server></app-routing-server>
+  <div class="col-xs-12 col-sm-8">
+    <a (click)="reloadPage()" class="btn btn-primary me-2">Reload</a>
+    <a (click)="goBack()" class="btn btn-secondary me-2">Back</a>
+    <a (click)="goToUsers()" class="btn btn-warning">See users</a>
+
+    <router-outlet></router-outlet>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServesService } from '../serves.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-routing-edit-server',
@@ -10,16 +11,48 @@ export class RoutingEditServerComponent implements OnInit {
   server: { id: number; name: string; status: string };
   serverName = '';
   serverStatus = '';
+  allowEdit = false;
 
-  constructor(private servesService: ServesService) {}
+  constructor(
+    private servesService: ServesService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.server = this.servesService.getServer(1);
-    this.serverName = this.server.name;
-    this.serverStatus = this.server.status;
+    // Use paramMap to get route parameters
+    const idParam = this.route.snapshot.paramMap.get('id');
+
+    if (idParam !== null) {
+      const id = +idParam;
+      this.server = this.servesService.getServer(id);
+
+      // Initialize serverName and serverStatus
+      this.serverName = this.server.name;
+      this.serverStatus = this.server.status;
+
+      // Logging for demonstration purposes
+      console.log(
+        id,
+        this.route.snapshot.queryParams,
+        this.route.snapshot.fragment
+      );
+
+      // You can also subscribe to changes in queryParams and fragment
+      this.route.queryParams.subscribe((queryParams) => {
+        this.allowEdit = queryParams['allowEdit'] === '1' ? true : false;
+        console.log('Query Params Updated:', queryParams);
+      });
+
+      this.route.fragment.subscribe((fragment) => {
+        console.log('Fragment Updated:', fragment);
+      });
+    } else {
+      console.error('ID parameter is null.');
+    }
   }
 
   onUpdateServer() {
+    // Update the server using the service
     this.servesService.updateServer(this.server.id, {
       name: this.serverName,
       status: this.serverStatus,

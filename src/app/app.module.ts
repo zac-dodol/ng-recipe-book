@@ -53,6 +53,7 @@ import { RoutingEditServerComponent } from './routing/routing-servers/routing-ed
 import { RoutingServerComponent } from './routing/routing-servers/routing-server/routing-server.component';
 import { RoutingUserComponent } from './routing/routing-users/routing-user/routing-user.component';
 import { ServesService } from './routing/routing-servers/serves.service';
+import { PageNotFoundComponent } from './page/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -97,6 +98,7 @@ import { ServesService } from './routing/routing-servers/serves.service';
     RoutingEditServerComponent,
     RoutingServerComponent,
     RoutingUserComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

@@ -16,8 +16,10 @@ export class ShoppingEditComponent {
   constructor(private shoppingListService: ShoppingListService) {}
 
   onAddItem() {
-    // if use viewchild and want to access value
+    // if not using viewchild and want to access value
     // const ingName = this.nameInputRef.nativeElement.value
+
+    // if using viewChild on the form, we can access all the values from the form itself
 
     const ingName = this.myForm.value.name;
     const ingAmount = this.myForm.value.amount;

@@ -73,3 +73,15 @@ export class DataService {
 //   // ...
 // })
 // export class YourModule {}
+
+// basic JS fetchdata function
+// async function fetchData(url) {
+//   const response = await fetch(url);
+//   const data = await response.json();
+//   return data;
+// }
+
+// let data;
+// fetchData("https://dummyjson.com/todos?limit=10&skip=80").then((res) => {
+//   data = res;
+// });

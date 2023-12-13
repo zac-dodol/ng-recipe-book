@@ -8,6 +8,7 @@
             aria-current="page"
             routerLink="routing-home"
             routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
           >
             Home
           </a>
@@ -18,7 +19,7 @@
             routerLink="routing-users"
             routerLinkActive="active"
           >
-            Servers
+            Users
           </a>
         </li>
         <li class="nav-item">
@@ -27,7 +28,7 @@
             routerLink="routing-servers"
             routerLinkActive="active"
           >
-            Users
+            Servers
           </a>
         </li>
       </ul>

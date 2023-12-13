@@ -16,6 +16,10 @@ import { RoutingPageComponent } from './routing/routing-page/routing-page.compon
 import { RoutingHomeComponent } from './routing/routing-home/routing-home.component';
 import { RoutingUsersComponent } from './routing/routing-users/routing-users.component';
 import { RoutingServersComponent } from './routing/routing-servers/routing-servers.component';
+import { RoutingUserComponent } from './routing/routing-users/routing-user/routing-user.component';
+import { RoutingEditServerComponent } from './routing/routing-servers/routing-edit-server/routing-edit-server.component';
+import { RoutingServerComponent } from './routing/routing-servers/routing-server/routing-server.component';
+import { PageNotFoundComponent } from './page/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   // define routes
@@ -36,10 +40,27 @@ const routes: Routes = [
     component: RoutingPageComponent,
     children: [
       { path: 'routing-home', component: RoutingHomeComponent },
-      { path: 'routing-users', component: RoutingUsersComponent },
-      { path: 'routing-servers', component: RoutingServersComponent },
+      {
+        path: 'routing-users',
+        component: RoutingUsersComponent,
+        children: [{ path: ':id/:name', component: RoutingUserComponent }],
+      },
+      {
+        path: 'routing-servers',
+        component: RoutingServersComponent,
+        children: [
+          { path: ':id', component: RoutingServerComponent },
+          {
+            path: ':id/edit',
+            component: RoutingEditServerComponent,
+          },
+        ],
+      },
     ],
   },
+  // 404 route & to change the url to be nicely worded
+  { path: 'not-found', component: PageNotFoundComponent },
+  { path: '**', redirectTo: 'not-found' },
 ];
 
 @NgModule({
