@@ -20,6 +20,8 @@ import { RoutingUserComponent } from './routing/routing-users/routing-user/routi
 import { RoutingEditServerComponent } from './routing/routing-servers/routing-edit-server/routing-edit-server.component';
 import { RoutingServerComponent } from './routing/routing-servers/routing-server/routing-server.component';
 import { PageNotFoundComponent } from './page/page-not-found/page-not-found.component';
+import { AuthGuardService } from './guard/auth-guard.service';
+import { NotAllowedComponent } from './page/not-allowed/not-allowed.component';
 
 const routes: Routes = [
   // define routes
@@ -48,6 +50,7 @@ const routes: Routes = [
       {
         path: 'routing-servers',
         component: RoutingServersComponent,
+        canActivate: [AuthGuardService],
         children: [
           { path: ':id', component: RoutingServerComponent },
           {
@@ -58,6 +61,8 @@ const routes: Routes = [
       },
     ],
   },
+  // permission required
+  { path: 'not-allowed', component: NotAllowedComponent },
   // 404 route & to change the url to be nicely worded
   { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: 'not-found' },

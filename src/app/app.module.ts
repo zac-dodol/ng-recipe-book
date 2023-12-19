@@ -54,6 +54,9 @@ import { RoutingServerComponent } from './routing/routing-servers/routing-server
 import { RoutingUserComponent } from './routing/routing-users/routing-user/routing-user.component';
 import { ServesService } from './routing/routing-servers/serves.service';
 import { PageNotFoundComponent } from './page/page-not-found/page-not-found.component';
+import { AuthService } from './guard/auth.service';
+import { AuthGuardService } from './guard/auth-guard.service';
+import { NotAllowedComponent } from './page/not-allowed/not-allowed.component';
 
 @NgModule({
   declarations: [
@@ -99,6 +102,7 @@ import { PageNotFoundComponent } from './page/page-not-found/page-not-found.comp
     RoutingServerComponent,
     RoutingUserComponent,
     PageNotFoundComponent,
+    NotAllowedComponent,
   ],
   imports: [
     BrowserModule,
@@ -111,7 +115,12 @@ import { PageNotFoundComponent } from './page/page-not-found/page-not-found.comp
     MatMenuModule,
     FormsModule,
   ],
-  providers: [ShoppingListService, ServesService],
+  providers: [
+    ShoppingListService,
+    ServesService,
+    AuthService,
+    AuthGuardService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
