@@ -1,3 +1,4 @@
+<!-- method without involving router -->
 <div class="d-flex flex-column col-12 p-3">
   <div class="nav d-flex gap-2 mb-4">
     <a
@@ -23,5 +24,30 @@
 
   <div class="flex-grow-1">
     <app-shopping-list *ngIf="loadedFeature === 'shopping'"></app-shopping-list>
+  </div>
+</div>
+
+<!-- method with children routing -->
+<div class="d-flex flex-column col-12 p-3">
+  <div class="nav d-flex gap-2 mb-4">
+    <a
+      class="nav-link p-0"
+      routerLinkActive="bg-dark"
+      routerLink="/recipe-page/recipe"
+    >
+      <app-button [text]="'Recipes'" [color]="'link'"></app-button
+    ></a>
+
+    <a
+      class="nav-link p-0"
+      routerLinkActive="bg-dark"
+      routerLink="/recipe-page/shopping-list"
+    >
+      <app-button [text]="'Shopping-list'" [color]="'link'"></app-button>
+    </a>
+  </div>
+
+  <div class="flex-grow-1">
+    <router-outlet></router-outlet>
   </div>
 </div>

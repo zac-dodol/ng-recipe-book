@@ -33,10 +33,17 @@ const routes: Routes = [
   { path: 'example-page', component: ExampleLinksComponent },
   { path: 'components-page', component: ComponentsPageComponent },
   { path: 'server-page', component: ServersComponent },
-  { path: 'recipe-page', component: RecipePageComponent },
+
+  {
+    path: 'recipe-page',
+    component: RecipePageComponent,
+    children: [
+      { path: 'recipe', component: RecipesComponent },
+      { path: 'shopping-list', component: ShoppingListComponent },
+    ],
+  },
+
   { path: 'game-page', component: CountGameComponent },
-  { path: 'recipe', component: RecipesComponent },
-  { path: 'shopping-list', component: ShoppingListComponent },
   { path: 'if-for-page', component: IfForComponent },
   { path: 'mock-data', component: MockDataComponent },
   { path: 'account-page', component: AccountPageComponent },
@@ -83,7 +90,7 @@ const routes: Routes = [
     component: ErrorPageComponent,
     data: { message: 'Page not found!' },
   },
-  { path: '**', redirectTo: 'error-page' },
+  { path: '**', redirectTo: 'not-found' },
 ];
 
 @NgModule({
