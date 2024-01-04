@@ -23,6 +23,8 @@ import { PageNotFoundComponent } from './page/page-not-found/page-not-found.comp
 import { AuthGuardService } from './guard/auth-guard.service';
 import { NotAllowedComponent } from './page/not-allowed/not-allowed.component';
 import { CanDeactivateGuardService } from './guard/can-deactivate-guard.service';
+import { ErrorPageComponent } from './page/error-page/error-page.component';
+import { ServerResolverService } from './resolver/server-resolver.service';
 
 const routes: Routes = [
   // define routes
@@ -57,7 +59,11 @@ const routes: Routes = [
         // guards only the path children when action
         canActivateChild: [AuthGuardService],
         children: [
-          { path: ':id', component: RoutingServerComponent },
+          {
+            path: ':id',
+            component: RoutingServerComponent,
+            resolve: { server: ServerResolverService },
+          },
           {
             path: ':id/edit',
             component: RoutingEditServerComponent,
@@ -71,7 +77,13 @@ const routes: Routes = [
   { path: 'not-allowed', component: NotAllowedComponent },
   // 404 route & to change the url to be nicely worded
   { path: 'not-found', component: PageNotFoundComponent },
-  { path: '**', redirectTo: 'not-found' },
+  // error page with data from url
+  {
+    path: 'error-page',
+    component: ErrorPageComponent,
+    data: { message: 'Page not found!' },
+  },
+  { path: '**', redirectTo: 'error-page' },
 ];
 
 @NgModule({
