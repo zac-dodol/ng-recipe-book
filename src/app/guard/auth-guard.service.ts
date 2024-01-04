@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {
   ActivatedRouteSnapshot,
   CanActivate,
+  CanActivateChild,
   CanActivateFn,
   Router,
   RouterStateSnapshot,
@@ -11,7 +12,7 @@ import { AuthService } from './auth.service';
 @Injectable({
   providedIn: 'root',
 })
-export class AuthGuardService implements CanActivate {
+export class AuthGuardService implements CanActivate, CanActivateChild {
   constructor(private authService: AuthService, private router: Router) {}
 
   async canActivate(
@@ -33,6 +34,13 @@ export class AuthGuardService implements CanActivate {
       // Handle the error, you might want to redirect to an error page or handle it in another way.
       return false;
     }
+  }
+
+  async canActivateChild(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ): Promise<boolean> {
+    return this.canActivate(next, state);
   }
 }
 

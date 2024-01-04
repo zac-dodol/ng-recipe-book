@@ -5,3 +5,12 @@
     Load Servers 1
   </button>
 </div>
+
+<div class="my-2 d-flex gap-1">
+  <button class="btn btn-primary" (click)="onLogin()">Login</button>
+  <button class="btn btn-secondary" (click)="onLogout()">Logout</button>
+</div>
+
+<div *ngIf="loginStatus; else loggedOut">you are logged in.</div>
+
+<ng-template #loggedOut> you are logged out. </ng-template>

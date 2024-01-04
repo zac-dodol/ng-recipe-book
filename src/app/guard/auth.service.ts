@@ -22,7 +22,7 @@ export class AuthService {
     this.loggedIn = true;
   }
 
-  logput() {
+  logout() {
     this.loggedIn = false;
   }
 }

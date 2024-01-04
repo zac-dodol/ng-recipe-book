@@ -57,6 +57,7 @@ import { PageNotFoundComponent } from './page/page-not-found/page-not-found.comp
 import { AuthService } from './guard/auth.service';
 import { AuthGuardService } from './guard/auth-guard.service';
 import { NotAllowedComponent } from './page/not-allowed/not-allowed.component';
+import { CanDeactivateGuardService } from './guard/can-deactivate-guard.service';
 
 @NgModule({
   declarations: [
@@ -120,6 +121,7 @@ import { NotAllowedComponent } from './page/not-allowed/not-allowed.component';
     ServesService,
     AuthService,
     AuthGuardService,
+    CanDeactivateGuardService,
   ],
   bootstrap: [AppComponent],
 })

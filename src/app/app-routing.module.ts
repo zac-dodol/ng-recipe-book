@@ -22,6 +22,7 @@ import { RoutingServerComponent } from './routing/routing-servers/routing-server
 import { PageNotFoundComponent } from './page/page-not-found/page-not-found.component';
 import { AuthGuardService } from './guard/auth-guard.service';
 import { NotAllowedComponent } from './page/not-allowed/not-allowed.component';
+import { CanDeactivateGuardService } from './guard/can-deactivate-guard.service';
 
 const routes: Routes = [
   // define routes
@@ -50,12 +51,17 @@ const routes: Routes = [
       {
         path: 'routing-servers',
         component: RoutingServersComponent,
-        canActivate: [AuthGuardService],
+        // guards the whole path
+        // canActivate: [AuthGuardService],
+
+        // guards only the path children when action
+        canActivateChild: [AuthGuardService],
         children: [
           { path: ':id', component: RoutingServerComponent },
           {
             path: ':id/edit',
             component: RoutingEditServerComponent,
+            canDeactivate: [CanDeactivateGuardService],
           },
         ],
       },
